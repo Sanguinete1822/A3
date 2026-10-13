@@ -107,7 +107,7 @@ public class GamePanel extends JPanel implements KeyListener {
     }
     @Override
     public void keyReleased(KeyEvent e) {
-        //falsifica o movimento para deseterniza-lo quando solto (realease)
+        //falsifica o movimento para deseterniza-lo quando a tecla é solta (realease)
         System.out.println("Tecla solta: " + e.getKeyCode());
         int tecla = e.getKeyCode();
         if (tecla == KeyEvent.VK_SPACE && naBase || tecla == 38 && naBase) {
