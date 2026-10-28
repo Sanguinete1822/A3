@@ -18,21 +18,11 @@ public class Rpg {
         areaTexto.setWrapStyleWord(true);
         JScrollPane scrollPane = new JScrollPane(areaTexto);
 
-
         cenario.add(scrollPane, BorderLayout.CENTER);
         tela.add(cenario);
 
-
-
-
-
-
-
-
-
         tela.setLocationRelativeTo(null);
         tela.setVisible(true);
-
 
         }
     }
