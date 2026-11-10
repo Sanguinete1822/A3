@@ -1,6 +1,4 @@
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.Timer;
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -30,7 +28,7 @@ class GamePanel extends JPanel implements KeyListener {
 //funcionamento
 
     //timer de ações
-    Timer tim = new Timer(10, e ->{
+    Timer tim = new Timer(10, _ ->{
         atualizar();
         repaint();
     });
@@ -124,10 +122,12 @@ class GamePanel extends JPanel implements KeyListener {
 public class Main_v1 {
     public static void main(String[] args) {
         JFrame janela = new JFrame();
+
+        janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         //Bibliotea JPanel com classe GamePanel, permite a criação de objetos configuráveis e codáveis dentro de
         //uma janela JFrame
         GamePanel painel = new GamePanel();
-
+        painel.setLayout(null);
 //cofigurando janela JFRAME
         //Título da Janela
         janela.setTitle("Meu jogo");
