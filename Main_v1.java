@@ -1,13 +1,11 @@
-import javax.swing.JPanel;
-import javax.swing.Timer;
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import javax.swing.*;
 
-public class GamePanel extends JPanel implements KeyListener {
+class GamePanel extends JPanel implements KeyListener {
 
-//Variáveis globais
+    //Variáveis globais
     //posição (x,y) lembrando que a linha das coordenadas deste gráfico são contrárias
     int y = 50;
     int x = 100;
@@ -30,7 +28,7 @@ public class GamePanel extends JPanel implements KeyListener {
 //funcionamento
 
     //timer de ações
-    Timer tim = new Timer(10, e ->{
+    Timer tim = new Timer(10, _ ->{
         atualizar();
         repaint();
     });
@@ -107,7 +105,7 @@ public class GamePanel extends JPanel implements KeyListener {
     }
     @Override
     public void keyReleased(KeyEvent e) {
-        //falsifica o movimento para deseterniza-lo quando solto (realease)
+        //falsifica o movimento para deseterniza-lo quando a tecla é solta (realease)
         System.out.println("Tecla solta: " + e.getKeyCode());
         int tecla = e.getKeyCode();
         if (tecla == KeyEvent.VK_SPACE && naBase || tecla == 38 && naBase) {
@@ -121,3 +119,30 @@ public class GamePanel extends JPanel implements KeyListener {
         }
     }
 }
+public class Main_v1 {
+    public static void main(String[] args) {
+        JFrame janela = new JFrame();
+
+        janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        //Bibliotea JPanel com classe GamePanel, permite a criação de objetos configuráveis e codáveis dentro de
+        //uma janela JFrame
+        GamePanel painel = new GamePanel();
+        painel.setLayout(null);
+//cofigurando janela JFRAME
+        //Título da Janela
+        janela.setTitle("Meu jogo");
+        //Tamanho da Janela
+        janela.setSize(800,600);
+        //de onde será tirada a configuração da janela (no caso painel que é a classe GamePanel) (janela.add procura
+        //o construtor na classe que reside no painel e roda aquele código
+        janela.add(painel);
+        //Torna a JFrame visível com true e invisível com false
+        janela.setVisible(true);
+
+//configs
+        //requisita um foco nas ações do usuário na tela configurada de painel, tornando possível usar o Scanner na
+        //classe Game Panel
+        painel.requestFocusInWindow();
+    }
+}
+
