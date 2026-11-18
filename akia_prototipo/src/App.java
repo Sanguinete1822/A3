@@ -1,13 +1,17 @@
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
+
+import pacotes.Cores;
 import pacotes.Menu;
+import static pacotes.Cores.*;
 
 
  public class App {
     private static final Scanner sc = new Scanner(System.in);
+    public static final Cores cor = new Cores();
     public static void main(String[] args) throws Exception {
         Menu men = new Menu("Inicial");
+
         
         String negrito = "\u001B[1m";
         String reset = "\u001B[0m";
@@ -94,17 +98,7 @@ import pacotes.Menu;
     }  
     
     private static void iniciarjogo(){
-
-        String negrito = "\u001B[1m";
-        String reset = "\u001B[0m";
-        String magenta = "\u001B[35m";
-        String azul = "\u001B[36m";
-        String azulClaro = "\u001B[34m";
-        String vermelho = "\u001B[31m";
-        String verde = "\u001B[32m";
         int progresso = 0;
-        
-
         System.out.println();
         System.out.println(negrito + vermelho + "|INICIALIZANDO PROTOCOLO...|" + reset);
         System.out.println();
