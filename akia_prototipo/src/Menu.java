@@ -1,13 +1,14 @@
 public class Menu{
-    public Menu{
-        
+    String menu;
+    public Menu(String menu){
+        this.menu = menu;
     }
     public void exibirMenu(){
-        System.out.println(negrito + "===% MENU %===" + reset);
+        System.out.println("===% MENU %===");
 
             System.out.println("\n[1] Novo Jogo" + 
                                "\n[2] Carregar Jogo" +
-                               "\n[3] Sair" + reset);
+                               "\n[3] Sair");
             System.out.print("\nEscolha: ");
     }
 }
