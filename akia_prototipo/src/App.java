@@ -142,7 +142,7 @@ public class App {
         System.out.println("Progresso: " + progresso + "/6");
 
 
-        System.out.println("\n[1]|Continuar " + 
+        //System.out.println("\n[1]|Continuar " + 
                                "\n[2] Fragmentos de Memórias" +
                                "\n[3] Sair" + reset);
         
