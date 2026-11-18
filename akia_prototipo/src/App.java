@@ -1,11 +1,13 @@
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import pacotes.Menu;
 
 
-/* public class App {
+ public class App {
     private static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) throws Exception {
+        Menu men = new Menu("Menu");
         
         String negrito = "\u001B[1m";
         String reset = "\u001B[0m";
@@ -39,12 +41,7 @@ import java.util.Scanner;
         while (true) {
 
         try {
-            System.out.println(negrito + "===% MENU %===" + reset);
-
-            System.out.println("\n[1] Novo Jogo" + 
-                               "\n[2] Carregar Jogo" +
-                               "\n[3] Sair" + reset);
-            System.out.print("\nEscolha: ");
+            men.exibirMenu();
             menu = sc.nextInt();
             sc.nextLine();
             
@@ -142,9 +139,9 @@ import java.util.Scanner;
         System.out.println("Progresso: " + progresso + "/6");
 
 
-        //System.out.println("\n[1]|Continuar " + 
+        System.out.println("\n[1]|Continuar " +
                                "\n[2] Fragmentos de Memórias" +
-                               "\n[3] Sair" + reset);
+                               "\n[3] Sair");
         
 
 
@@ -163,24 +160,5 @@ import java.util.Scanner;
         "À sua frente, uma enorme porta metálica impede a entrada. O acesso está bloqueado e não há sinais de funcionamento manual.\n" + //
         "\n" + //
         "É hora de recorrer ao dispositivo que você encontrou anteriormente.");
-
-        
-
-        
-
-
-
-
-
-        
-
-
-
-
-
-                        
-                        
-
     }  
 }
- */
