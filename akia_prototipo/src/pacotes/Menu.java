@@ -1,3 +1,4 @@
+package pacotes;
 public class Menu{
     String menu;
     public Menu(String menu){
