@@ -5,9 +5,9 @@ import pacotes.Menu;
 
 
  public class App {
-    private static Scanner sc = new Scanner(System.in);
+    private static final Scanner sc = new Scanner(System.in);
     public static void main(String[] args) throws Exception {
-        Menu men = new Menu("Menu");
+        Menu men = new Menu("Inicial");
         
         String negrito = "\u001B[1m";
         String reset = "\u001B[0m";
@@ -16,8 +16,8 @@ import pacotes.Menu;
          
     
         System.out.println("""
-                                                    
-       ________ _________ ________ __________ ____ ________________ 
+                                                   \s
+       ________ _________ ________ __________ ____ ________________\s
       |        |         |        |          |    |                |
       |  o  o  | *  *  * |  |‾‾|  | :  :  :  | [] |   []  []  []   |
       |  o  o  | *  *  * |  |  |  | :  :  :  | [] |   []  []  []   |
@@ -30,7 +30,7 @@ import pacotes.Menu;
         System.out.println("==============================================================\n");
         System.out.println(negrito + "                           AK'IA       ");
         System.out.println("                                                 ");
-        System.out.printf("==============================================================\n");
+        System.out.print("==============================================================\n");
         System.out.println();
 
         //Variavel
@@ -139,9 +139,11 @@ import pacotes.Menu;
         System.out.println("Progresso: " + progresso + "/6");
 
 
-        System.out.println("\n[1]|Continuar " +
-                               "\n[2] Fragmentos de Memórias" +
-                               "\n[3] Sair");
+        System.out.println("""
+                
+                [1]|Continuar 
+                [2] Fragmentos de Memórias
+                [3] Sair""");
         
 
 
