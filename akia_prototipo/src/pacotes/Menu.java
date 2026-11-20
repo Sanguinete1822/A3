@@ -1,5 +1,4 @@
 package pacotes;
-import pacotes.Main;
 import static pacotes.Cores.*;
 import static pacotes.BDD.*;
 
@@ -11,8 +10,6 @@ public class Menu{
         this.menu = menu;
     }
     public void exibirMenu(){
-        int njog = 0;
-        njog+=1;
         if (menu.equals("Inicial")){
             boolean teste = true;
             int menu;
@@ -20,9 +17,11 @@ public class Menu{
 
                 try {
                     System.out.println("===% MENU %===");
-                    System.out.println("\n[1] Novo Jogo" +
-                            "\n[2] Carregar Jogo" +
-                            "\n[3] Sair");
+                    System.out.println("""
+                            
+                            [1] Novo Jogo
+                            [2] Carregar Jogo
+                            [3] Sair""");
                     System.out.print("\nEscolha: ");
                     menu = sc.nextInt();
                     sc.nextLine();
@@ -30,23 +29,23 @@ public class Menu{
                 } catch (InputMismatchException e) {
                     System.out.println("\nOpção inválida, digite novamente.\n");
                     sc.nextLine();
+                    menu = 0;
                     continue;
                 }
 
                 switch (menu) {
                     case 1:
                         int jog = 1;
-                        Main jogo = new Main(jog);
-                        jogo.iniciarjogo();
+                        teste = false;
                         break;
-
 
                     case 2:
                         System.out.println("Em breve...");
                         System.exit(0);
 
                     case 3:
-                        while (true) {
+                        boolean test = true;
+                        while (test) {
                             int opcao;
                             System.out.println(negrito + "\n$====$ || $====$\n" + reset);
                             System.out.println("Deseja realemente sair?");
@@ -62,6 +61,7 @@ public class Menu{
                             } else if (opcao == 1) {
                                 System.out.println("Voltando ao menu...");
                                 System.out.println();
+                                test = false;
                                 break;
                             } else {
                                 System.out.println("Opção inválida, digite novamente.");
@@ -72,9 +72,11 @@ public class Menu{
                     default:
                         System.out.println("\nOpção inválida, tente novamente.");
                         System.out.println();
+                        menu = 0;
 
                 }
             }
         }
+        // outros menus
     }
 }

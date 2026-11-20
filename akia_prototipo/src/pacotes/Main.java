@@ -2,23 +2,37 @@ package pacotes;
 
 import java.util.Scanner;
 import pacotes.Menu;
-
 import static pacotes.Cores.*;
-import static pacotes.Cores.azul;
-import static pacotes.Cores.azulClaro;
-import static pacotes.Cores.magenta;
-import static pacotes.Cores.negrito;
-import static pacotes.Cores.reset;
-import static pacotes.Cores.verde;
-import static pacotes.Cores.vermelho;
 
 public class Main {
-    int jogo;
     private static final Scanner sc = new Scanner(System.in);
+    int jogo;
     public Main(int jogo){
         this.jogo = jogo;
     }
     public static void iniciarjogo(){
+        System.out.print("""
+                ==============================================================""");
+        System.out.println("""
+                                                   \s
+       ________ _________ ________ __________ ____ ________________\s
+      |        |         |        |          |    |                |
+      |  o  o  | *  *  * |  |‾‾|  | :  :  :  | [] |   []  []  []   |
+      |  o  o  | *  *  * |  |  |  | :  :  :  | [] |   []  []  []   |
+      |  o  o  | *  *  * |  |  |  | :  :  :  | [] |   []  []  []   |
+      |  o  o  | *  *  * |  |__|  | :  :  :  | [] |   []  []  []   |
+      |________|_________|__|__|__|__________|____|________________|
+      |__|__|__|__|__|_ _|__|__|__|__|____|__|____|____|______|____|""");
+        System.out.println();
+
+        System.out.println("==============================================================\n");
+        System.out.println(negrito + "                           AK'IA       ");
+        System.out.println("                                                 ");
+        System.out.print("==============================================================\n");
+        System.out.println();
+
+        new Menu("Inicial").exibirMenu();
+
         int progresso = 0;
         System.out.println();
         System.out.println(negrito + vermelho + "|INICIALIZANDO PROTOCOLO...|" + reset);
@@ -55,8 +69,8 @@ public class Main {
 
 
         System.out.println("""
-                
-                [1]|Continuar 
+               \s
+                [1]|Continuar\s
                 [2] Fragmentos de Memórias
                 [3] Sair""");
 
