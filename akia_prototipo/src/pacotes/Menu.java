@@ -1,7 +1,7 @@
 package pacotes;
 
 import java.util.Scanner;
-import static pacotes.Cores.*;;
+import static pacotes.Cores.*;
 
 public class Menu{
     public Menu(){
@@ -21,7 +21,7 @@ public class Menu{
             menu = sc.nextInt();
             sc.nextLine();
             switch (menu) {
-                case 1, 2, 3 -> {break;}
+                case 1, 2, 3 -> {}
                 default -> {
                     System.out.println("\nOpção inválida, tente novamente.");
                     System.out.println();

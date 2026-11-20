@@ -60,15 +60,11 @@ public class Main {
         System.out.println("CAPITULO I - PROLÓGO");
         System.out.println("Progresso: " + progresso + "/6");
 
-
         System.out.println("""
                \s
                 [1]|Continuar\s
                 [2] Fragmentos de Memórias
                 [3] Sair""");
-
-
-
 
         System.out.println();
         System.out.println();
