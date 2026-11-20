@@ -11,9 +11,9 @@ public class Menu{
     }
     public void exibirMenu(){
         if (menu.equals("Inicial")){
-            boolean teste = true;
+            boolean menu_w = true;
             int menu;
-            while (teste) {
+            while (menu_w) {
 
                 try {
                     System.out.println("===% MENU %===");
@@ -35,8 +35,7 @@ public class Menu{
 
                 switch (menu) {
                     case 1:
-                        int jog = 1;
-                        teste = false;
+                        menu_w = false;
                         break;
 
                     case 2:
@@ -44,8 +43,8 @@ public class Menu{
                         System.exit(0);
 
                     case 3:
-                        boolean test = true;
-                        while (test) {
+                        boolean menu_ = true;
+                        while (menu_) {
                             int opcao;
                             System.out.println(negrito + "\n$====$ || $====$\n" + reset);
                             System.out.println("Deseja realemente sair?");
@@ -61,7 +60,7 @@ public class Menu{
                             } else if (opcao == 1) {
                                 System.out.println("Voltando ao menu...");
                                 System.out.println();
-                                test = false;
+                                menu_ = false;
                                 break;
                             } else {
                                 System.out.println("Opção inválida, digite novamente.");
@@ -72,7 +71,6 @@ public class Menu{
                     default:
                         System.out.println("\nOpção inválida, tente novamente.");
                         System.out.println();
-                        menu = 0;
 
                 }
             }
