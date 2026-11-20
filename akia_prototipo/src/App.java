@@ -5,6 +5,6 @@ import pacotes.Main;
 public class App {
     private static final Scanner sc = new Scanner(System.in);
     public static void main(String[] args) throws Exception {
-        new Main().iniciarjogo();
+        Main.iniciarjogo();
     }
 }

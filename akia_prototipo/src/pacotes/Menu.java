@@ -1,13 +1,9 @@
 package pacotes;
-import pacotes.Main;
 
 import java.util.Scanner;
-
-import static pacotes.Cores.negrito;
-import static pacotes.Cores.reset;
+import static pacotes.Cores.*;;
 
 public class Menu{
-    String menu;
     public Menu(){
     }
     public void exibirMenu(){
@@ -16,9 +12,11 @@ public class Menu{
             Scanner sc = new Scanner(System.in);
             int menu;
             System.out.println("===% MENU %===");
-            System.out.println("\n[1] Novo Jogo" +
-                    "\n[2] Carregar Jogo" +
-                    "\n[3] Sair");
+            System.out.println("""
+                    
+                    [1] Novo Jogo
+                    [2] Carregar Jogo
+                    [3] Sair""");
             System.out.print("\nEscolha: ");
             menu = sc.nextInt();
             sc.nextLine();
