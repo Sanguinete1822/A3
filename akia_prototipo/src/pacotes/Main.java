@@ -10,7 +10,7 @@ public class Main {
     public Main(int jogo){
         this.jogo = jogo;
     }
-    public static void iniciarjogo(){
+    public static void iniciarjogo() throws InterruptedException {
         System.out.print("""
                 ==============================================================""");
         System.out.println("""
@@ -91,5 +91,7 @@ public class Main {
                 "À sua frente, uma enorme porta metálica impede a entrada. O acesso está bloqueado e não há sinais de funcionamento manual.\n" + //
                 "\n" + //
                 "É hora de recorrer ao dispositivo que você encontrou anteriormente.");
+        sc.nextLine();
+
     }
 }

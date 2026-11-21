@@ -7,4 +7,7 @@ public class Cores {
     public static String azulClaro = "\u001B[34m";
     public static String vermelho = "\u001B[31m";
     public static String verde = "\u001B[32m";
+    public static String apagar_t = "\033[5;10H";
+    public static String apagar_u = "\033[2K";
+
 }
